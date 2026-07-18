@@ -11,7 +11,7 @@
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
     <!-- Babel for JSX -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <!-- Lucide Icons -->
+    <!-- Lucide Icons (ブラウザ用) -->
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         .perspective-1000 { perspective: 1000px; }
@@ -190,7 +190,7 @@
           return new Blob([buffer], { type: 'audio/wav' });
         }
 
-        // --- Icons Helper (Lucide React 代替) ---
+        // --- ★エラーの原因だったアイコン表示処理を修正 ---
         const Icon = ({ name, className }) => {
             const iconRef = useRef(null);
             useEffect(() => {
